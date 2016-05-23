@@ -22,7 +22,8 @@
             }
 
             document.getElementById('text').innerHTML = texts[0];
-            setInterval(rotateText, 112000);
+            var refreshInterval = 900000;
+            setInterval(rotateText, refreshInterval / texts.length);
         </script>
     </body>
 </html>
