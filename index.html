@@ -1,12 +1,23 @@
 <!doctype html>
 <html>
-<head>
-</head>
-<body>
-foo
-<h1 id="foo"></h1>
-<script>
-    document.getElementById('foo').innerHTML = 'fooba';
-</script>
-</body>
+    <head>
+    </head>
+    <body>
+        <h1 id="text"></h1>
+        <script>
+            var texts = ['Tsemppiä työpäivään', 'Luovuus on jokaisen ulottuvilla', 'Hymyile - näytät hyvältä tänään', 'Innovatiivisin kehittymisen mahdollistaja', 'Laaja-alainen oppimisen kumppani', 'Ajantasaista lakitietoa ammattilaisille', 'Usko itseesi', ' #gamification', '#pelillistäminen']
+            var counter = 0;
+            function rotateText() {
+              document.getElementById('text').innerHTML = texts[counter];
+
+              if (counter < texts.length - 1) {
+                    counter++
+              } else {
+                    counter = 0
+              }
+            }
+
+            setInterval(rotateText, 10000);
+        </script>
+    </body>
 </html>
